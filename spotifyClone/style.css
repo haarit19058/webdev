@@ -1,0 +1,402 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin:0;
+    background-color: rgb(0, 0, 0);
+    color:white;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+.sidebar{
+    background-color:#000000;
+    width: 30%;
+    border-radius: 0.2rem;
+    margin-right: 0.5rem;
+
+}
+
+.music-player{
+    background-color: black;
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+    height:72px;
+    /* bcolor: black;  */
+}
+
+.main-content{
+    background-color:#121212;
+    flex: 1;
+    border-radius: 0.5rem;
+    overflow: auto;
+    padding: 0 1.5rem 0 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav{
+    background-color: #121212;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:100px;
+    padding:0.5rem 0.75rem;
+}
+
+.nav-option{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+.nav-option:hover {
+    opacity: 1;
+}
+.nav-option i{
+    font-size: 1.25rem;
+    /* opacity: 1 ; */
+
+}
+.nav-option a{
+    font-size: 1rem;  
+    margin-left:1rem; 
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 0.5rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding:0.5rem 0.75rem;
+
+}
+
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.lib-options img{
+    height:1.25rem;
+    width:1.25rem;
+}
+
+.icons{
+    font-size: 1.25rem;
+    
+    display: flex;
+}
+
+.icons i{
+    opacity: 0.7;
+    margin-right: 1rem;
+
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.box{
+    height:8rem;
+    background-color: #232323;
+    border-radius: 0.75rem;
+    margin:0.5rem 0 1.75rem 0;
+    padding:0.5rem  1rem;
+}
+
+.box-p1{
+    font-size:1rem;
+    opacity: 0.75rem;
+}
+
+.box-p2{
+    font-size:0.75rem;
+    opacity: 0.9rem;
+}
+.badge{
+    background-color: white;
+    border:none;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    font-weight:700;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    height:2rem;
+    width:fit-content;
+    transition: 0.3s;
+}
+
+
+
+.sticky-nav{
+    position: sticky;
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.5rem 0 0.8rem 0;
+    z-index: 1;
+}
+
+.sticky-nav-icons{
+    margin-left: 0.75rem;
+}
+.sticky-nav-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+
+@media(max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+
+.card{
+    position: relative;
+    background-color: #191919;
+    width:150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition:0.1s;
+}
+
+.card:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-image{
+    width:100%;
+    border-radius: 0.5rem
+}
+
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size:0.85rem;
+    opacity: 0.5 ;
+}
+
+
+.footer{
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    height:30%;
+    width:90%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+    /* margin */
+}
+
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album{
+    width:25%
+}
+
+.player{
+    width:50%;
+    padding-left: 4rem;
+}
+
+.controls{
+    width:25%; 
+}
+
+.player-control-icon{
+    height:1rem;
+    margin-right:1.5rem;
+    opacity: 0.7;
+}
+.player-control-icon:hover{
+    opacity: 1;
+}
+.player-controls{
+    padding-left: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.playbackbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar{
+    width:70%; 
+    appearance: none ;
+    /* background-color:#1bb760; */
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-runnable-track{
+    background-color: #ddd; 
+    border-radius: 100px;
+    --is-active-fg-color: #1db954;
+    height:0.15rem;
+}
+
+.progress-bar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bb760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+
+.album{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+}
+
+.photo{
+    height:3.5rem;
+    margin-left: 2rem;
+}
+.alb-1{
+    padding-top: 1rem;
+    height: 1.7rem;
+    margin-left: 1rem;
+    
+}
+.alb-2{
+    padding-top: 0.7rem;
+    height: 2.3rem;
+    margin-left: 1rem;
+}
+
+.songname{
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+.artistname{
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+    margin-left: 1rem;
+    opacity: 0.7;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.control1{
+    height: 3rem;
+    margin-left: 10rem;
+}
+
+.control2{
+    height: 3rem;
+    margin-left: 0.5rem;
+    opacity: 1;
+    color:white;
+}
+.control3{
+    height: 1.5rem;
+    margin-left: 0.5rem;
+}
+.control4{
+    height: 1.3rem;
+    margin-left: 0.5rem;
+}
+.control5{
+    height: 2.7rem;
+    margin-left: 0.5rem;
+}
+
+.vol_ctrl{
+    appearance: none;
+    width: 80%;
+    background-color: transparent;
+    margin-bottom:0.8rem;
+
+}
+
+.vol_ctrl::-webkit-slider-runnable-track{
+    width:4rem;
+    background-color: #d9d9d9;
+    height:0.15rem;
+}
+
+.vol_ctrl::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bb760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+
+.effect1{
+    position: absolute;
+}
+.playbtn {
+    position: absolute;
+    bottom: 7em;
+    left:6.8em;
+    color: #1bb760;
+    transform: scale(2.6);
+    opacity: 0;
+    transition: 0.35s;
+}
+.card:hover .playbtn {
+    position: absolute;
+    bottom: 7.8em;
+    left:6.8em;
+    opacity: 1;
+
+}
+
+.playbtn:hover{
+    transform: scale(2.9);
+    cursor: pointer;
+}
+
+.badge:hover{
+    transform: scale(1.07);
+}
+
+h2,.cards-container{
+    padding-left: 1.5rem;
+}

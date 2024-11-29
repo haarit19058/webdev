@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- writing name like listing[title] will return listing and we can use it in js like
+        req.body.listings and it gives all the name written like listing[element] as an array
+    -->
+    <form action="/listings/<%=listing._id %>?_method=PUT" method="post">
+        <label for="listing[title]">Enter the title</label>
+        <input type="text" name="listing[title]" value=<%=listing.title %>><br><br>
+        <label for="listing[description]" >Description</label>
+        <input type="text" name="listing[description]" value=<%=listing.description %>><br><br>
+        <label for="listing[image]">Image url</label>
+        <input type="text" name="listing[image]" value=<%=listing.image %>><br><br>
+        <label for="listing[price]"> Enter price</label>
+        <input type="text" name="listing[price]" value=<%=listing.price %>><br><br>
+        <label for="listing[location]">Location</label>
+        <input type="text" name="listing[location]" value=<%=listing.location %>><br><br>
+        <label for="listing[country]">Country</label>
+        <input type="text" name="listing[country]" value=<%=listing.country %>><br><br>
+        <button>submit</button>
+    </form>
+</body>
+</html>

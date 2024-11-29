@@ -1,0 +1,17 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<link rel="stylesheet" href="/css/style1.css">
+<body>
+    <h2>All listings</h2>
+    <!-- <form action="/listings/new" method="get"><button>Create new listing</button></form> -->
+    <div class="main">
+    <% for(let listing of alllistings){ %>   
+        <div class="card">
+            <a href="/listings/<%=listing._id %>" class="links"><img src="<%=listing.image %>" alt="" class="imgs"></a>
+            <a href="/listings/<%=listing._id %>" class="links"><%=listing.title %></a>
+        </div>
+    <% } %>
+    </div>
+</body>
+
+
+
