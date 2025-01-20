@@ -1,0 +1,103 @@
+
+.toolbox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* background-color: #f4f4f4; */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    /* margin: 20px auto; */
+}
+
+/* Styling for each tool icon and label */
+.toolbox > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 10px;
+    /* padding-left: 10px; */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.toolbox > *:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f0f8ff;
+}
+
+.toolbox > *:active {
+    transform: scale(1.05);
+    background-color: #e6f7ff;
+}
+
+
+/* Label styling */
+.toolbox > * > span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    text-align: center;
+}
+
+/* Green theme for Save .savebtn */
+.savebtn {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.savebtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.savebtn:active {
+    background-color: #1e7e34;
+}
+
+.savebtn:focus {
+    outline: none;
+}
+
+.savebtn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+/* Clear .savebtn styling */
+.clearbtn {
+    padding: 10px 15px;
+    background-color: #f44336; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.clearbtn:hover {
+    background-color: #d32f2f; 
+    transform: scale(1.05);
+}
+
+.clearbtn:active {
+    background-color: #c62828; 
+}
+
+
+
